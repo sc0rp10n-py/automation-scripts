@@ -6,11 +6,11 @@ cd linux-5.14.3
 wget https://bit.ly/3kBUZhR
 mv 3kBUZhR .config
 echo "MAKE COMMAND"
-make
+make -j6
 echo "AGAIN MAKE TO CONFIRM"
-make
+make -j6
 echo "MAKE MODULES NOW"
-sudo make modules_install
+sudo make modules_install -j16
 sudo cp arch/x86_64/boot/bzImage /boot/vmlinuz-linux-5.14.3
 sudo cp System.map System.map-5.14.3
 sudo mkinitcpio -k 5.14.3 -g /boot/initramfs-linux-5.14.3.img
