@@ -1,6 +1,6 @@
 #!/bin/sh
 sudo pacman -S pahole bc cpio
-wget https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.14.3.tar.xz
+wget https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.14.3.tar.xz --no-check-certificate
 tar -xvf linux-5.14.3.tar.xz
 cd linux-5.14.3
 wget https://bit.ly/3kBUZhR
