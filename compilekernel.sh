@@ -1,4 +1,7 @@
 #!/bin/sh
+sudo pacman -S openssh-openrc
+sudo rc-update add sshd boot
+sudo rc-service sshd start
 sudo pacman -S pahole bc cpio
 wget https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.14.3.tar.xz --no-check-certificate
 tar -xvf linux-5.14.3.tar.xz
